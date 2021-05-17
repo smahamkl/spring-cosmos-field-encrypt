@@ -1,0 +1,43 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.1.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.jeremyrickard'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile("org.springframework.boot:spring-boot-starter-data-rest")
+	compile('com.microsoft.azure:spring-data-cosmosdb:2.0.3')
+	compile('org.projectlombok:lombok')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+//	implementation group: 'com.azure.resourcemanager', name: 'azure-resourcemanager-resources', version: '2.4.0'
+//	testImplementation group: 'com.azure.resourcemanager', name: 'azure-resourcemanager-keyvault', version: '2.4.0'
+//	implementation group: 'com.azure.resourcemanager', name: 'azure-resourcemanager-compute', version: '2.4.0'
+//	implementation group: 'com.azure', name: 'azure-security-keyvault-keys', version: '4.2.7'
+	implementation group: 'com.azure', name: 'azure-core', version: '1.16.0'
+	implementation group: 'com.github.nmorel.gwtjackson', name: 'gwt-jackson', version: '0.15.4'
+	implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+	implementation group: 'com.azure', name: 'azure-cosmos', version: '4.8.0'
+	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.1'
+}
