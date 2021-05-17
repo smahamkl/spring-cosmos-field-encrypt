@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.jeremyrickard.cosmosdb;
+package org.sivam.cosmosdb;
 
 import com.microsoft.azure.documentdb.IndexingMode;
 import com.microsoft.azure.spring.data.documentdb.core.mapping.Document;

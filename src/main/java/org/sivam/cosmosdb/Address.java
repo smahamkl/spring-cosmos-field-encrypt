@@ -1,5 +1,5 @@
 /*
- * Copyright 2014-2018 the original author or authors.
+ * Copyright 2015-2018 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,18 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jeremyrickard.cosmosdb;
+package org.sivam.cosmosdb;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.data.annotation.Id;
 
 @Getter
 @Setter
-@ConfigurationProperties(prefix = "azure.documentdb.field")
-public class DocDbEncryKeyMetaProperties {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Address {
 
-    private String emailkey;
+    @Id
+    private String postalCode;
 
-    private String namekey;
+    private String street;
+
+    private String city;
+
+    @Override
+    public String toString() {
+        return String.format("%s, %s, %s", this.street, this.city, this.postalCode);
+    }
 }

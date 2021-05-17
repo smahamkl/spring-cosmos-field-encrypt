@@ -13,17 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jeremyrickard.cosmosdb;
+package org.sivam.cosmosdb;
 
-import com.microsoft.azure.documentdb.ConnectionPolicy;
-import com.microsoft.azure.documentdb.ConsistencyLevel;
-import com.microsoft.azure.documentdb.DocumentClient;
-import com.microsoft.azure.spring.data.documentdb.config.AbstractDocumentDbConfiguration;
-import com.microsoft.azure.spring.data.documentdb.repository.config.EnableDocumentDbRepositories;
 import org.crypto.util.CryptoUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 

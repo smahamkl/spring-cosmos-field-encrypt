@@ -13,20 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jeremyrickard.cosmosdb;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+package org.sivam.cosmosdb;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Setter
-@Getter
-public class Role {
+import com.microsoft.azure.spring.data.documentdb.repository.DocumentDbRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.stereotype.Repository;
 
-    private String name;
+import java.util.List;
 
-    int cost;
+@Repository
+@RepositoryRestResource(collectionResourceRel = "user", path = "user")
+public interface UserRepository extends DocumentDbRepository<User, String> {
+
+    List<User> findByName(String firstName);
+
+    List<User> findByEmailAndAddress(String email, Address address);
 }
+

@@ -13,14 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jeremyrickard.cosmosdb;
+package org.sivam.cosmosdb;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 import java.util.Arrays;
 
 @SpringBootApplication

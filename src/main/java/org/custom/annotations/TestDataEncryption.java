@@ -1,35 +1,6 @@
 package org.custom.annotations;
 
-import com.azure.cosmos.CosmosAsyncClient;
-import com.azure.cosmos.CosmosClient;
-import com.azure.cosmos.CosmosClientBuilder;
-import com.azure.cosmos.models.*;
-import com.azure.cosmos.util.CosmosPagedIterable;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.github.nmorel.gwtjackson.client.exception.JsonSerializationException;
-import com.jeremyrickard.cosmosdb.User;
-import org.crypto.util.CryptoUtil;
-
-import javax.crypto.SecretKey;
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.PBEKeySpec;
-import javax.crypto.spec.SecretKeySpec;
-import javax.xml.bind.DatatypeConverter;
-import java.security.SecureRandom;
-import java.security.spec.KeySpec;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.List;
-import com.azure.cosmos.CosmosClient;
-import com.azure.cosmos.CosmosContainer;
-import com.azure.cosmos.CosmosDatabase;
-import com.azure.cosmos.CosmosException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.azure.cosmos.implementation.Utils;
-
-
-import static org.crypto.util.CryptoUtil.*;
 
 public class TestDataEncryption {
 
